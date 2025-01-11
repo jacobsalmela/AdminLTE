@@ -109,6 +109,7 @@ select:-webkit-autofill {
   --darkreader-selection-background: #004daa;
   --darkreader-selection-text: #e8e6e3;
   --datatable-bgcolor: rgb(35, 47, 52);
+  --overlay-bgcolor: rgba(35, 47, 52, 0.7);
 }
 
 /* Modified CSS */
@@ -691,8 +692,7 @@ fieldset[disabled] .btn {
 .btn-default:active,
 .open > .dropdown-toggle.btn-default {
   color: rgb(200, 195, 188);
-  background-color: rgb(38, 41, 43);
-  background-image: none;
+  background: rgb(24, 26, 27);
   border-color: rgb(71, 77, 80);
 }
 .btn-default.active.focus,
@@ -705,9 +705,15 @@ fieldset[disabled] .btn {
 .open > .dropdown-toggle.btn-default:focus,
 .open > .dropdown-toggle.btn-default:hover {
   color: rgb(200, 195, 188);
-  background-color: rgb(48, 52, 54);
+  background: rgb(24, 26, 27);
   border-color: rgb(80, 87, 91);
 }
+
+.bootstrap-select > .dropdown-toggle {
+  border-radius: 0;
+  background: rgb(24, 26, 27);
+}
+
 .btn-default.disabled.focus,
 .btn-default.disabled:focus,
 .btn-default.disabled:hover,
@@ -5616,8 +5622,14 @@ link-muted {
 .queries-permitted {
   background-color: rgb(0, 133, 72);
 }
+.queries-other {
+  background-color: #0077a6;
+}
 .queries-blocked {
   background-color: rgb(82, 88, 92);
+}
+.queries-cached {
+  background-color: rgb(0, 57, 24);
 }
 .text-green-light {
   color: rgb(140, 255, 26) !important;
